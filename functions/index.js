@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 import mySecretKey from "./secret.js";
 
 const users = [
+  // fake database
   { id: 1, email: "todd@bocacode.com", password: "abc123" },
   { id: 1, email: "damien@bocacode.com", password: "def456" },
   { id: 1, email: "vitoriad@bocacode.com", password: "ghi123" },
@@ -52,7 +53,7 @@ app.get("/private", (req, res) => {
       return;
     }
     // here we know that the token is valid
-    res.send(`Welcome ${decoded.email}!`);
+    res.send(`Welcome ${decoded.email}!`); // put info that we want to allow user to do
   });
 });
 
