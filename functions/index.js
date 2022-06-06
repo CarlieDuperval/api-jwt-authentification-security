@@ -53,6 +53,7 @@ app.get("/private", (req, res) => {
       return;
     }
     // here we know that the token is valid
+    // we can check and see if decoded.id fro example is the user that
     res.send(`Welcome ${decoded.email}!`); // put info that we want to allow user to do
   });
 });
